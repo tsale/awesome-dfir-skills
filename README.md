@@ -4,10 +4,10 @@ A community-driven collection of DFIR / incident response **skills**: reusable p
 
 ## How to use these skills (quick)
 
-- Pick a skill from `skills/` and open its `skill.md`.
-- Copy the **Skill prompt (copy/paste)** into your assistant/tool (Claude, Codex, etc.).
-- Replace placeholders like `{{time_window}}` / `{{event_snippets}}` with your case artifacts (sanitized).
-- Run the prompt, then iterate by pasting the requested follow-up artifacts.
+- Use these skills as **repeatable instructions**.
+- Tell your assistant which skill/workflow you want to run, then provide the requested inputs/artifacts.
+- Keep placeholders like `{{time_window}}` / `{{event_snippets}}` as placeholders—provide your values in the corresponding sections when prompted.
+- Iterate by pasting the follow-up artifacts the skill asks for.
 
 Browse categories and conventions in `skills/README.md`.
 
@@ -39,13 +39,15 @@ Start browsing at `skills/README.md`.
 
 ### Claude
 
-- Create a new Claude “skill” and paste the contents of a `skill.md` file.
-- Keep the YAML metadata at the top; it’s useful for humans and for catalog tooling.
+- Skills are folders of instructions/resources that Claude can load dynamically.
+- Use the skill’s **Skill prompt (copy/paste)** as the workflow instructions, and provide your inputs in-chat when prompted.
+- Keep placeholders as placeholders; provide values in the corresponding sections.
 
 ### OpenAI / Codex
 
-- Use the **Skill prompt (copy/paste)** section from `skill.md` as the skill instructions.
-- Fill in the placeholders (`{{...}}`) with the artifacts/notes from your case.
+- Codex skills are loaded from a skills folder (e.g., `$REPO_ROOT/.codex/skills`) and can be invoked explicitly (via skill mention) or implicitly.
+- This repo stores skills under `skills/` for humans; if you want Codex to auto-load them, mirror/link them into a Codex skill location.
+- Provide your artifacts/notes as inputs; keep placeholders (`{{...}}`) as placeholders.
 
 ## Contributing
 

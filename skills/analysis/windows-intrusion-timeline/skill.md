@@ -60,7 +60,7 @@ To get the best timeline, provide a **"case bundle"**:
   - Either: a few dozen/high-signal rows/events, or summary counts + top examples
   - Prefer structured fields (JSON/CSV) over rendered message text
 
-## Skill prompt (copy/paste)
+## Skill instructions
 
 > **Role**: You are a Windows DFIR analyst.
 >

@@ -37,7 +37,7 @@ outputs:
 - Redact secrets, tokens, personal data (PII), credentials, customer names.
 - Prefer hashes and sample snippets over full dumps.
 
-## Skill prompt (copy/paste)
+## Skill instructions
 
 > **Role**: You are a DFIR analyst.
 >
@@ -65,5 +65,5 @@ outputs:
 
 ## Compatibility notes
 
-- Claude Skills: store this file as the skill body; keep YAML metadata.
-- OpenAI/Codex Skills: use the “Skill prompt” section as the skill instructions.
+- Claude Skills: store the instructions in the skill file; keep YAML metadata.
+- OpenAI/Codex Skills: use the “Skill instructions” section as the skill instructions.

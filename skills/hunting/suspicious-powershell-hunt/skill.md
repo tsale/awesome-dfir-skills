@@ -19,7 +19,7 @@ outputs:
   - name: "hunt_plan"
     description: "Prioritized hypotheses + what to query + what to pivot to next."
   - name: "query_snippets"
-    description: "Copy/paste query fragments (generic + some platform-specific)."
+    description: "Query fragments (generic + some platform-specific)."
 ---
 
 # Suspicious PowerShell hunt (cross-platform ideas)
@@ -39,7 +39,7 @@ outputs:
 - Don’t paste full script blocks from production unless permitted.
 - Prefer hashing script blocks or sharing key substrings.
 
-## Skill prompt (copy/paste)
+## Skill instructions
 
 > **Role**: You are a detection engineer / threat hunter.
 >

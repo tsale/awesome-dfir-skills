@@ -41,7 +41,7 @@ outputs:
 - Don’t paste raw email bodies with PII unless necessary—prefer headers and redacted snippets.
 - Don’t paste credentials, secrets, access tokens.
 
-## Skill prompt (copy/paste)
+## Skill instructions
 
 > **Role**: You are a DFIR incident responder.
 >
