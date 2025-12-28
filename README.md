@@ -70,8 +70,6 @@ Codex loads skills from a dedicated folder (e.g., `$REPO_ROOT/.codex/skills`):
 
 ## 🤝 Contributing
 
-Got a killer workflow that's saved your bacon during an incident? Share it!
-
 ### How to Add a Skill
 
 1. Copy `skills/_templates/skill.md`
@@ -85,8 +83,6 @@ Got a killer workflow that's saved your bacon during an incident? Share it!
 
 ## 💡 Inspiration
 
-This project stands on the shoulders of giants:
-
 - [Claude Skills](https://support.claude.com/en/articles/12512176-what-are-skills) — Anthropic's skill system
 - [OpenAI Codex Skills](https://developers.openai.com/codex/skills/) — OpenAI's approach
 
@@ -94,7 +90,7 @@ This project stands on the shoulders of giants:
 
 ## 📜 License
 
-MIT — Use it, fork it, improve it. Just don't blame us if you use the wrong skill at 4 AM.
+MIT — Use it, fork it, improve it.
 
 ---
 
