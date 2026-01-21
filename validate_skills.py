@@ -24,14 +24,8 @@ from typing import Dict, List, Optional, Tuple
 
 
 REQUIRED_KEYS = {
-    "id",
     "name",
-    "description",
-    "version",
-    "license",
-    "category",
-    "inputs",
-    "outputs",
+    "description"
 }
 
 
@@ -48,8 +42,11 @@ def find_skill_markdowns(skills_dir: Path) -> List[Path]:
         if Path(root).parts[-1] == "_templates":
             dirs[:] = []
             continue
-        if "skill.md" in files:
-            results.append(Path(root) / "skill.md")
+        # Case-insensitive search for skill.md
+        for file in files:
+            if file.lower() == "skill.md":
+                results.append(Path(root) / file)
+                break
     return sorted(results)
 
 
@@ -105,7 +102,7 @@ def validate_skill_path(path: Path) -> List[Problem]:
     except ValueError:
         rel = path.parts
 
-    if len(rel) < 4 or rel[-1] != "skill.md":
+    if len(rel) < 4 or rel[-1].lower() != "skill.md":
         problems.append(Problem(path, "unexpected location; expected skills/<category>/<skill-id>/skill.md"))
 
     return problems
@@ -123,6 +120,11 @@ def main(argv: List[str]) -> int:
     if not skill_files:
         print("ERROR: no skill.md files found under skills/", file=sys.stderr)
         return 1
+
+    print(f"Checking {len(skill_files)} skill(s):")
+    for p in skill_files:
+        print(f"  - {p.relative_to(root)}")
+    print()
 
     problems: List[Problem] = []
     for p in skill_files:

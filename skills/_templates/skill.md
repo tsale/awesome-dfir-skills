@@ -1,23 +1,7 @@
 ---
 # Skill metadata (keep this at the top)
-id: ""
 name: ""
 description: ""
-version: "0.1.0"
-author: ""
-license: "Apache-2.0"
-tags: []
-# One of: triage | collection | analysis | hunting | reporting | misc
-category: "misc"
-# Target environments/tools (freeform)
-platforms: []
-inputs:
-  - name: ""
-    description: ""
-    required: true
-outputs:
-  - name: ""
-    description: ""
 ---
 
 # {{name}}
